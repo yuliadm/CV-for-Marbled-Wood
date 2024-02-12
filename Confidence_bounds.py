@@ -45,19 +45,19 @@ mean_bending_strength = np.mean(fmA) # [MPa]
 
 
 # standard deviation
-mu = math.log(mean_bending_strength)
+mu = mean_bending_strength
 
 # number of simulations for the monte carlo simulation
-number_simulations = 10000
+number_simulations = 1000
 
 # sigfificane level of 5 %
 z=1.96
 
 # calculate deviations (?) for different numbers of sample sizes
-sample_sizes = [5,6,7,8,9,10,15,20,50]
+sample_sizes = [5,6,7,8,9,10,15,20,30,40,50,60,70,80,90,100]
 
 # calculate deviations (?) for different CoV's
-CoVs = [10,15,20,25,30]
+CoVs = [1,5,10,15,20]
 
 colors = ['aqua','dodgerblue','blue','darkviolet','fuchsia']
 
@@ -66,6 +66,8 @@ ax1 = fig.add_subplot(111)
 ax1.set_ylabel(r'$|t_{5\%}*s/\sqrt{n}|/MOR_{A,mean}~[\%]$')
 ax1.set_xlabel(r'sample size [-]')
 plt.title('number of simulations = ' + str(number_simulations))
+# ax1.set_ylim(0.0,3.0)
+ax1.set_xlim(0.0,max(sample_sizes))
 ax1.grid(True)
 
 # for all CoVs...
@@ -89,12 +91,14 @@ for k, cov in enumerate(CoVs):
         for j in range(number_simulations):
             
             # create randomly generate normal distributed sample
+            # normal_data = np.random.normal(np.log(mu), np.log(sigma), n)
             normal_data = np.random.normal(mu, sigma, n)
             # create logs
             lognormal_data = np.exp(normal_data)
             
             # calculate confidence bounds based on generated sample
-            dev = math.log(z * np.std(lognormal_data) / math.sqrt(n))
+            # dev = math.log(z * np.log(np.std(lognormal_data)) / math.sqrt(n))
+            dev = (z * np.std(normal_data) / math.sqrt(n))
             
             # append confidence bound to array
             Deviations = np.append(Deviations, dev)
@@ -125,10 +129,10 @@ for k, cov in enumerate(CoVs):
 
 
 dev_exp = mean_bending_strength/100*z * np.std(fmB) / math.sqrt(nB)
-ax1.scatter(nB, dev_exp, marker='v', label='Gruppe B', color = 'black')
+ax1.scatter(nB, dev_exp, marker='v', label='Gruppe B', color = 'purple')
 
 
-ax1.legend(loc='lower right')
+ax1.legend(loc='upper right')
 figure_name = 'confidents_bounds_n='+str(number_simulations)+'.jpg'
 plt.savefig(figure_name,
             dpi=600)
