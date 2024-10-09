@@ -1,5 +1,7 @@
 # Computer Vision for Assessing Marbled Wood Patterns
 
+![marbled-wood-empa](https://www.empa.ch/documents/56164/7263206/Marmorholz.jpg/94fb0a17-0906-447e-8c40-f03e3b4f4a12?t=1554187192000)
+
 #### Description: 
 Fungi, which normally decompose whole tree trunks, can conjure up works of art in wood. Empa researcher Hugh Morris has succeeded in creating dark lines in the wood with the help of a fire-crust fungus. The result is spalted wood that can be processed into unique furniture and musical instruments.
 Empa researchers have now developed a technology, with which hardwoods such as beech, ash and maple can be specifically treated with fungal cultures so that the patterns in the wood can be controlled.
