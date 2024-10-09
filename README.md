@@ -12,6 +12,14 @@ Source: https://www.empa.ch/web/s604/marmorholz
 In this project, we want to learn to analyse the extent to which the pattern has developed in the marbled wood.
 To that extent, we also want to be able to demarcate the battle fields of different fungial colonies.
 
+#### Applications:
+
+With spalted wood from local beech trees, however, it is possible to offer sought-after products on the Swiss timber market with an annual volume of around 3 billion Swiss francs.
+
+In addition to furniture, parquet floors and kitchen fronts, spalted wood can also be used for decorative objects and musical instruments. Unique pieces have always been created from patterned wood. With the new technology, spalted wood can now be produced faster, more sustainably and with the desired marbling.
+
+
+
 
 ## MIT Lecture Notes on Probability And Its Applications To Reliability, Quality Control, And Risk Assessment
 https://ocw.mit.edu/courses/22-38-probability-and-its-applications-to-reliability-quality-control-and-risk-assessment-fall-2005/pages/lecture-notes/
